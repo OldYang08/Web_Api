@@ -1,5 +1,7 @@
 ﻿using Api_CRUD.Data;
+using Api_CRUD.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Api_CRUD.Controllers
 {
@@ -15,9 +17,25 @@ namespace Api_CRUD.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetCustomers()
+        public async Task<IActionResult> GetCustomers()
         {
-            return Ok(dbContext.Customers.ToList());
+            return Ok(await dbContext.Customers.ToListAsync());
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddCustomers(AddModel addModel)
+        {
+            var customer = new CustomerModel()
+            {
+                Id = Guid.NewGuid(),
+                Name = addModel.Name,
+                Email = addModel.Email,
+            };
+
+            await dbContext.Customers.AddAsync(customer);
+            await dbContext.SaveChangesAsync();
+
+            return Ok(customer);
         }
     }
 }
