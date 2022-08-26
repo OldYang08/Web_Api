@@ -37,5 +37,23 @@ namespace Api_CRUD.Controllers
 
             return Ok(customer);
         }
+
+        [HttpPut]
+        [Route("{Id:guid}")]
+        public async Task<IActionResult> UpdateCustomer([FromRoute] Guid Id, UpdateModel updateModel )
+        {
+            var customer = await dbContext.Customers.FindAsync(Id);
+
+            if(customer != null)
+            {
+                customer.Name = updateModel.Name;
+                customer.Email = updateModel.Email;
+
+                await dbContext.SaveChangesAsync();
+
+                return Ok(customer);
+            }
+            return NotFound();
+        }
     }
 }
