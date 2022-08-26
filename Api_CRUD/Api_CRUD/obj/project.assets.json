@@ -757,11 +757,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\TibameClass\\Tibame\\WEB API\\Api_CRUD\\Api_CRUD\\Api_CRUD.csproj",
+      "projectUniqueName": "C:\\TibameClass\\Tibame\\Web_API\\Api_CRUD\\Api_CRUD\\Api_CRUD.csproj",
       "projectName": "Api_CRUD",
-      "projectPath": "C:\\TibameClass\\Tibame\\WEB API\\Api_CRUD\\Api_CRUD\\Api_CRUD.csproj",
+      "projectPath": "C:\\TibameClass\\Tibame\\Web_API\\Api_CRUD\\Api_CRUD\\Api_CRUD.csproj",
       "packagesPath": "C:\\Users\\homki\\.nuget\\packages\\",
-      "outputPath": "C:\\TibameClass\\Tibame\\WEB API\\Api_CRUD\\Api_CRUD\\obj\\",
+      "outputPath": "C:\\TibameClass\\Tibame\\Web_API\\Api_CRUD\\Api_CRUD\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

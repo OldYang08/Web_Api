@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KFBJgTcmP1OKWCwtd4zJZnxxPAH5/a9cuvoKEdPDHKp24oRXU0rQhntmgix5yAQjBiClagxG0xks/JWfpNcDoQ==",
+  "dgSpecHash": "EwNf6wf/fcq3BOKYOq1f6Mrlh9iFcohsDMxrwXLz25NTmlDPqq2Yp3c7c1HDgry5MTIU66ubERGmxVv9q0prYw==",
   "success": true,
-  "projectFilePath": "C:\\TibameClass\\Tibame\\WEB API\\Api_CRUD\\Api_CRUD\\Api_CRUD.csproj",
+  "projectFilePath": "C:\\TibameClass\\Tibame\\Web_API\\Api_CRUD\\Api_CRUD\\Api_CRUD.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\homki\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.8\\microsoft.entityframeworkcore.6.0.8.nupkg.sha512",
     "C:\\Users\\homki\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.8\\microsoft.entityframeworkcore.abstractions.6.0.8.nupkg.sha512",
