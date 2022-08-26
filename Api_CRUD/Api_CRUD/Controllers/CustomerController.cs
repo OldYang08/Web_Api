@@ -22,6 +22,19 @@ namespace Api_CRUD.Controllers
             return Ok(await dbContext.Customers.ToListAsync());
         }
 
+        [HttpGet]
+        [Route("{Id:guid}")]
+        public async Task<IActionResult> GetCustomer([FromRoute] Guid Id)
+        {
+            var customer = await dbContext.Customers.FindAsync(Id);
+            
+            if(customer == null)
+            {
+                return NotFound();
+            }
+            return Ok(customer);
+        }
+
         [HttpPost]
         public async Task<IActionResult> AddCustomers(AddModel addModel)
         {
@@ -55,5 +68,23 @@ namespace Api_CRUD.Controllers
             }
             return NotFound();
         }
+
+        [HttpDelete]
+        [Route("{Id:guid}")]
+
+        public async Task<IActionResult> DeleteCustomer([FromRoute] Guid Id)
+        {
+            var customer = await dbContext.Customers.FindAsync(Id);
+            
+            if(customer != null)
+            {
+                dbContext.Remove(customer);
+                await dbContext.SaveChangesAsync();
+                return Ok(customer);
+            }
+            return NotFound();
+        }
+
+
     }
 }
